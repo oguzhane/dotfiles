@@ -1,0 +1,99 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "ubuntu": "<#EF7D00>\uF31b</>",
+            "windows": "<#028AF2>\uE62A</>"
+          },
+          "style": "plain",
+          "template": "{{.Icon}}",
+          "type": "os"
+        },
+        {
+          "foreground": "#ffafd2",
+          "style": "plain",
+          "template": " {{ .UserName }} ",
+          "type": "session"
+        },
+        {
+          "foreground": "#EF7D00",
+          "properties": {
+            "style": "full",
+            "home_icon": "\ue5ff ~",
+            "exclude_folders": [
+              "/mnt/c",
+              "/mnt/c/.*"
+            ]
+          },
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "type": "path"
+        },
+        {
+          "foreground": "#3b78ff",
+          "properties": {
+            "style": "full",
+            "include_folders": [
+              "/mnt/c",
+              "/mnt/c/.*"
+            ],
+            "mapped_locations": {
+              "/mnt/c/Users/oguzhanergin": "\ue5ff ~"
+            }
+          },
+          "style": "plain",
+          "template": "{{ .Path }} ",
+          "type": "path"
+        },
+
+        {
+          "properties": {
+            "branch_icon": "",
+            "fetch_stash_count": true
+          },
+          "style": "plain",
+          "template": "<#ffffff>on</> {{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
+          "type": "git"
+        },
+        {
+          "foreground": "#906cff",
+          "style": "powerline",
+          "template": "[\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}] ",
+          "type": "python"
+        },
+        {
+          "foreground": "#7FD5EA",
+          "style": "powerline",
+          "template": "[\ufcd1 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}] ",
+          "type": "go"
+        },
+        {
+          "foreground": "#76b367",
+          "style": "powerline",
+          "template": "[\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}] ",
+          "type": "node"
+        }
+      ],
+      "type": "prompt"
+    },
+    {
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "foreground": "#FFD54F",
+          "style": "plain",
+          "template": "\u276f",
+          "type": "text"
+        }
+      ],
+      "type": "prompt"
+    }
+  ],
+  "final_space": true,
+  "version": 2
+}
