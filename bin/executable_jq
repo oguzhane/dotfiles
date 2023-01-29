@@ -1,1 +1,2 @@
-tea $(basename "$0") 
+#!/bin/sh
+tea $(basename "$0") $@
