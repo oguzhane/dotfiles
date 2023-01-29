@@ -117,3 +117,8 @@ source $ZSH/oh-my-zsh.sh
 source ~/.wsl.zsh
 
 test -d "$HOME/.tea" && source <("$HOME/.tea/tea.xyz/v*/bin/tea" --magic --silent)
+function mktealn(){
+    echo "making relative tea-link for: $HOME/bin/$1"
+    # ln -s $HOME/bin/tea-ln $HOME/bin/$1
+    ln -s ./tea-ln $HOME/bin/$1
+}
