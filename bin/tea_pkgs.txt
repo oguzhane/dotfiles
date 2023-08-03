@@ -2,3 +2,4 @@
 +stedolan.github.io/jq
 +cli.github.com
 +youtube-dl.org
++httpie.io
