@@ -3,3 +3,4 @@
 +cli.github.com
 +youtube-dl.org
 +httpie.io
++github.com/junegunn/fzf
