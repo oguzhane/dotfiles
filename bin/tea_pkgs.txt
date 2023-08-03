@@ -4,3 +4,4 @@
 +youtube-dl.org
 +httpie.io
 +github.com/junegunn/fzf
++github.com/jesseduffield/lazydocker
