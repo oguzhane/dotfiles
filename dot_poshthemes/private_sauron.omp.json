@@ -42,7 +42,8 @@
               "/mnt/c/.*"
             ],
             "mapped_locations": {
-              "/mnt/c/Users/oguzhanergin": "\ue5ff ~"
+              "/mnt/c/Users/oguzhanergin": "\ue5ff ~",
+              "/mnt/c/Users/oguzh": "\ue5ff ~"
             }
           },
           "style": "plain",
