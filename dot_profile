@@ -29,3 +29,5 @@ fi
 # set up Go lang path #
 export GOPATH=$HOME/go
 export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+
+if [ -e /home/oergin/.nix-profile/etc/profile.d/nix.sh ]; then . /home/oergin/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
