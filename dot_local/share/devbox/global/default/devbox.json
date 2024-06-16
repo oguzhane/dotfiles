@@ -8,7 +8,8 @@
     "fzf@0.53.0",
     "lazydocker@0.23.3",
     "joshuto@latest",
-    "oh-my-posh@21.0.1"
+    "oh-my-posh@21.0.1",
+    "tmux@3.4"
   ],
   "shell": {
     "init_hook": [
