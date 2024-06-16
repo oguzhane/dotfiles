@@ -1,5 +1,0 @@
-#!/bin/sh
-# echo "fullpath: $0"
-# echo "basename: $(basename "$0")"
-# echo "allargs: $@"
-tea $(basename "$0") $@

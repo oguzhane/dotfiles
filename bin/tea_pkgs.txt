@@ -1,7 +1,0 @@
-+chezmoi.io
-+stedolan.github.io/jq
-+cli.github.com
-+youtube-dl.org
-+httpie.io
-+github.com/junegunn/fzf
-+github.com/jesseduffield/lazydocker
