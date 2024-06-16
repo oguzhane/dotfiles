@@ -1,12 +1,6 @@
-#eval "$(starship init zsh)"
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#ff00ff,bg=cyan,bold,underline"
-#source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-#return
-#
-USE_OH_MY_POSH=true
-if $USE_OH_MY_POSH;  then
-    eval "$(oh-my-posh init zsh --config ~/.poshthemes/sauron.omp.json)"
-else
+USE_OH_MY_POSH="true"
+
+if [ "$USE_OH_MY_POSH" = "false" ]; then
     ZSH_THEME="spaceship"
 fi
 
@@ -115,13 +109,8 @@ source $ZSH/oh-my-zsh.sh
 
 ### CUSTOM ###
 source ~/.wsl.zsh
+eval "$(devbox global shellenv)"
 
-function mktealn(){
-    echo "making relative tea-link for: $HOME/bin/$1"
-    # ln -s $HOME/bin/tea-ln $HOME/bin/$1
-    ln -s ./tea-ln $HOME/bin/$1
-}
-
-# alias python3=python3.10
-# alias python=python3.10
-source <(tea --shellcode)  #docs.tea.xyz/shellcode
+if [ "$USE_OH_MY_POSH" = "true" ]; then
+    eval "$(oh-my-posh init zsh --config ~/.poshthemes/sauron.omp.json)"
+fi
