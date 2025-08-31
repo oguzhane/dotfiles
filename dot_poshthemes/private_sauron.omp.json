@@ -2,99 +2,117 @@
   "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
   "blocks": [
     {
+      "type": "prompt",
       "alignment": "left",
       "segments": [
         {
           "properties": {
-            "ubuntu": "<#EF7D00>\uF31b</>",
-            "windows": "<#028AF2>\uE62A</>"
+            "cache_duration": "none",
+            "ubuntu": "<#EF7D00>\uf31b</>",
+            "windows": "<#028AF2>\ue62a</>"
           },
-          "style": "plain",
           "template": "{{.Icon}}",
-          "type": "os"
+          "type": "os",
+          "style": "plain"
         },
         {
-          "foreground": "#ffafd2",
-          "style": "plain",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": " {{ .UserName }} ",
-          "type": "session"
+          "foreground": "#ffafd2",
+          "type": "session",
+          "style": "plain"
         },
         {
-          "foreground": "#EF7D00",
           "properties": {
-            "style": "full",
+            "cache_duration": "none",
             "home_icon": "\ue5ff ~",
-            "exclude_folders": [
-              "/mnt/c",
-              "/mnt/c/.*"
-            ]
+            "style": "full"
           },
-          "style": "plain",
           "template": "{{ .Path }} ",
-          "type": "path"
+          "foreground": "#EF7D00",
+          "type": "path",
+          "style": "plain",
+          "exclude_folders": [
+            "/mnt/c",
+            "/mnt/c/.*"
+          ]
         },
         {
-          "foreground": "#3b78ff",
           "properties": {
-            "style": "full",
-            "include_folders": [
-              "/mnt/c",
-              "/mnt/c/.*"
-            ],
+            "cache_duration": "none",
             "mapped_locations": {
-              "/mnt/c/Users/oguzhanergin": "\ue5ff ~",
-              "/mnt/c/Users/oguzh": "\ue5ff ~"
-            }
+              "/mnt/c/Users/oguzh": "\ue5ff ~",
+              "/mnt/c/Users/oguzhanergin": "\ue5ff ~"
+            },
+            "style": "full"
           },
-          "style": "plain",
           "template": "{{ .Path }} ",
-          "type": "path"
+          "foreground": "#3b78ff",
+          "type": "path",
+          "style": "plain",
+          "include_folders": [
+            "/mnt/c",
+            "/mnt/c/.*"
+          ]
         },
-
         {
           "properties": {
             "branch_icon": "",
+            "cache_duration": "none",
             "fetch_stash_count": true
           },
-          "style": "plain",
           "template": "<#ffffff>on</> {{ .HEAD }}{{ if gt .StashCount 0 }} \uf692 {{ .StashCount }}{{ end }} ",
-          "type": "git"
+          "type": "git",
+          "style": "plain"
         },
         {
-          "foreground": "#906cff",
-          "style": "powerline",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "[\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}] ",
-          "type": "python"
+          "foreground": "#906cff",
+          "type": "python",
+          "style": "powerline"
         },
         {
-          "foreground": "#7FD5EA",
-          "style": "powerline",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "[\ufcd1 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}] ",
-          "type": "go"
+          "foreground": "#7FD5EA",
+          "type": "go",
+          "style": "powerline"
         },
         {
-          "foreground": "#76b367",
-          "style": "powerline",
+          "properties": {
+            "cache_duration": "none"
+          },
           "template": "[\ue718 {{ if .PackageManagerIcon }}{{ .PackageManagerIcon }} {{ end }}{{ .Full }}] ",
-          "type": "node"
+          "foreground": "#76b367",
+          "type": "node",
+          "style": "powerline"
         }
-      ],
-      "type": "prompt"
+      ]
     },
     {
+      "type": "prompt",
       "alignment": "left",
-      "newline": true,
       "segments": [
         {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "❯",
           "foreground": "#FFD54F",
-          "style": "plain",
-          "template": "\u276f",
-          "type": "text"
+          "type": "text",
+          "style": "plain"
         }
       ],
-      "type": "prompt"
+      "newline": true
     }
   ],
-  "final_space": true,
-  "version": 2
+  "version": 3,
+  "final_space": true
 }
