@@ -87,6 +87,51 @@ devbox install
 
 This will download and make available each tool as defined in `devbox.json`.
 
+### 3. Configure Oh My Posh (Optional but Recommended)
+
+After devbox installs the global apps (including `oh-my-posh`), you can set up Oh My Posh with Nerd Fonts for a beautiful terminal prompt experience.
+
+#### Windows Setup
+
+1. **Install Oh My Posh on Windows (PowerShell):**
+   
+   Oh My Posh should already be available if you've run `devbox install`. However, if you need to install it separately on Windows:
+   ```powershell
+   winget install JanDeDobbeleer.OhMyPosh -s winget
+   ```
+
+2. **Install Nerd Font (as Administrator):**
+   
+   Open a new Windows Terminal as Administrator, then in a PowerShell session, run:
+   ```powershell
+   oh-my-posh font install meslo
+   ```
+   
+   This installs the MesloLGM Nerd Font system-wide.
+
+3. **Configure Windows Terminal to Use the Nerd Font:**
+   
+   Open Windows Terminal settings (default shortcut: `CTRL + SHIFT + ,`) and modify your `settings.json` file. Add the `font.face` attribute under the `defaults` attribute in `profiles`:
+   
+   ```json
+   {
+       "profiles":
+       {
+           "defaults":
+           {
+               "font":
+               {
+                   "face": "MesloLGM Nerd Font"
+               }
+           }
+       }
+   }
+   ```
+   
+   Save the file and restart Windows Terminal to see the icons displayed properly in Oh My Posh.
+
+**Note:** Nerd Fonts need to be installed on the host system (not inside WSL or containers) since this is a UI setting for your terminal emulator.
+
 ---
 
-Your repository structure, package choices, and automation with chezmoi and devbox let you quickly bootstrap or maintain consistent developer environments across devices. For any system, after installing chezmoi, devbox, and Oh My Zsh, a few commands will restore your entire setup.
+Your repository structure, package choices, and automation with chezmoi and devbox let you quickly bootstrap or maintain consistent developer environments across devices. For any system, after installing prerequisites and following the steps above, you'll have a fully configured development environment with Oh My Zsh, Oh My Posh, and all your essential tools.
