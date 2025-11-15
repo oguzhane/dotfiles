@@ -12,19 +12,36 @@ This repository centralizes your dotfiles for tools like bash, zsh, vim, tmux, a
 ## Prerequisites
 
 - **git:** To clone this repository.
+- **zsh:** Required shell for Oh My Zsh.
 - **chezmoi:** For dotfile management ([install instructions](https://www.chezmoi.io/install/)).
 - **devbox:** For managing development environments ([install instructions](https://jetify.com/devbox/docs/installation/)).
 
 ## Getting Started
 
-### 1. Install chezmoi
+### 1. Install Oh My Zsh
+
+Oh My Zsh is a popular framework for managing Zsh configuration. Your dotfiles expect it:
+
+```sh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+```
+
+This will set up the base infrastructure for customizing your Zsh with themes and plugins.
+
+### 2. Install chezmoi
 
 Follow the [official instructions](https://www.chezmoi.io/install/), or on most Unix systems:
 ```sh
 sh -c "$(curl -fsLS get.chezmoi.io)"
 ```
 
-### 2. Install devbox
+**Note:** Add `bin/` to your PATH (temporary, for current session):
+```sh
+export PATH="$PWD/bin:$PATH"
+```
+Now `chezmoi` will work when you type just `chezmoi` as long as you are in your repository root.
+
+### 3. Install devbox
 
 Refer to the [devbox installation guide](https://jetify.com/devbox/docs/installation/) or run:
 ```sh
@@ -72,4 +89,4 @@ This will download and make available each tool as defined in `devbox.json`.
 
 ---
 
-Your repository structure, package choices, and automation with chezmoi and devbox let you quickly bootstrap or maintain consistent developer environments across devices. For any system, after installing chezmoi and devbox per above, your preferred workflow and toolchain can be reflected in minutes.
+Your repository structure, package choices, and automation with chezmoi and devbox let you quickly bootstrap or maintain consistent developer environments across devices. For any system, after installing chezmoi, devbox, and Oh My Zsh, a few commands will restore your entire setup.
