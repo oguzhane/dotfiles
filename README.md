@@ -37,7 +37,7 @@ sh -c "$(curl -fsLS get.chezmoi.io)"
 
 **Note:** Add `bin/` to your PATH (temporary, for current session):
 ```sh
-export PATH="$PWD/bin:$PATH"
+export PATH="~/bin:$PATH"
 ```
 Now `chezmoi` will work when you type just `chezmoi` as long as you are in your repository root.
 
