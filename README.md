@@ -87,7 +87,7 @@ devbox install
 
 This will download and make available each tool as defined in `devbox.json`.
 
-### 3. Configure Oh My Posh (Optional but Recommended)
+### 3. Configure Oh My Posh Fonts (Optional but Recommended)
 
 After devbox installs the global apps (including `oh-my-posh`), you can set up Oh My Posh with Nerd Fonts for a beautiful terminal prompt experience.
 
@@ -95,7 +95,7 @@ After devbox installs the global apps (including `oh-my-posh`), you can set up O
 
 1. **Install Oh My Posh on Windows (PowerShell):**
    
-   Oh My Posh should already be available if you've run `devbox install`. However, if you need to install it separately on Windows:
+   Oh My Posh should also be installed on the host separately:
    ```powershell
    winget install JanDeDobbeleer.OhMyPosh -s winget
    ```
